@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FastStatic</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/buefy@0.8.20/dist/buefy.min.css"
+      integrity="sha256-MWaT1Jl6QsHwcnMHSpFrJa2+jyUPdCrRcK22rPGRe5o="
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <style>
+      html {
+        overflow-y: auto;
+      }
+      /* * {
+        font-family: Montserrat, "Noto Sans SC", sans-serif !important;
+      } */
+      * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      .navbar-item .icon {
+        margin: 0 !important;
+      }
+      .intro {
+        width: 100%;
+        background-color: #e8e8e8;
+        padding: 3rem 2rem;
+      }
+      .body > div {
+        padding: 0 2rem;
+      }
+      .body > div > .container {
+        padding-top: 32px;
+      }
+      .body > .get-started > .container {
+        padding-bottom: 32px;
+      }
+      div > .container svg {
+        width: 24px;
+        height: 24px;
+        vertical-align: bottom;
+      }
+      div > .container h1 {
+        margin-bottom: 4px;
+      }
+      div.sponsor svg {
+        width: 109px;
+        height: 32px;
+      }
+      .footers {
+        background-color: whitesmoke;
+        padding: 1rem 2rem;
+        height: 80px;
+      }
+      #app {
+        min-height: calc(100vh - 80px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <template>
+        <b-navbar>
+          <template slot="brand">
+            <b-navbar-item href="https://google.com">
+              <img
+                src="https://cdn.jsdelivr.net/gh/buefy/buefy@0.8.20/static/img/buefy-logo.png"
+                alt="FastStatic"
+              />
+            </b-navbar-item>
+          </template>
+          <template slot="start">
+            <b-navbar-item href="#">
+              首页
+            </b-navbar-item>
+            <b-navbar-item href="#">
+              关于
+            </b-navbar-item>
+            <b-navbar-item href="#">
+              条款
+            </b-navbar-item>
+          </template>
+
+          <template slot="end">
+            <b-navbar-item tag="div">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>
+                    开始使用
+                  </strong>
+                </a>
+              </div>
+            </b-navbar-item>
+          </template>
+        </b-navbar>
+        <div class="intro">
+          <div class="container">
+            <h1 class="is-size-4">
+              为开发者而设的
+              <br />
+              免费前端静态资源 CDN 服务
+              <br />
+              <br />
+              助力分享开发技术
+            </h1>
+          </div>
+        </div>
+        <div class="body">
+          <div class="feature">
+            <div class="container">
+              <h1>特点</h1>
+              <p class="has-text-weight-medium is-size-5">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+                  />
+                </svg>
+                国内 + 国外 CDN 节点
+              </p>
+              <p class="has-text-weight-medium is-size-5">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+                  />
+                </svg>
+                HTTP/2 Ready
+              </p>
+              <p class="has-text-weight-medium is-size-5">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+                  />
+                </svg>
+                HTTPS
+              </p>
+            </div>
+          </div>
+          <div class="resources">
+            <div class="container">
+              <h1>提供的资源</h1>
+              <p class="has-text-weight-medium is-size-5">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+                  />
+                </svg>
+                常用开源前端静态资源
+              </p>
+              <p class="has-text-weight-medium is-size-5">
+                <svg viewBox="0 0 24 24"></svg>
+                eg: Vue.js, React, Lodash.js ...
+              </p>
+            </div>
+          </div>
+          <div class="sponsor">
+            <div class="container">
+              <h1>赞助商</h1>
+              <svg viewBox="0 0 218 64">
+                <g fill="none">
+                  <path
+                    d="M70.032 32.25c0-9.189 7.048-15.39 16.371-15.39 7.807 0 11.732 4.55 13.517 8.655l-7.762 3.613c-.759-2.32-3.078-4.327-5.755-4.327-4.327 0-7.226 3.3-7.226 7.45 0 4.148 2.9 7.45 7.226 7.45 2.677 0 4.996-2.008 5.755-4.328l7.762 3.569c-1.74 3.97-5.71 8.698-13.517 8.698-9.323 0-16.37-6.245-16.37-15.39zm53.171-.044c0-4.015-2.32-7.004-7.137-7.004h-4.327v14.052h4.282c4.506 0 7.182-3.301 7.182-7.048zm-20.475 14.9V17.35h13.293c9.368 0 16.327 5.353 16.327 14.855 0 9.501-6.959 14.9-16.282 14.9h-13.338zm52.814 0l-10.972-15.08v15.078h-9.011V17.351h9.278l10.35 14.097V17.35h9.01v29.754h-8.654zm16.414 0l9.413-21.904h-13.962v-7.85h24.31v6.245l-9.902 23.508h-9.859zm25.757 0l9.413-21.904h-13.962v-7.85h24.31v6.245l-9.902 23.508h-9.859zM27.145 0C12.153 0 0 12.228 0 27.31c0 15.084 27.145 36.415 27.145 36.415s27.146-21.33 27.146-36.414C54.29 12.228 42.137 0 27.145 0"
+                    fill="#04151F"
+                  ></path>
+                  <path
+                    d="M27.145 9.753c-9.139 0-16.547 7.453-16.547 16.648S18.006 43.05 27.145 43.05c9.14 0 16.548-7.454 16.548-16.649S36.284 9.753 27.145 9.753"
+                    fill="#FFE115"
+                  ></path>
+                  <path
+                    d="M27.144 18.89c-4.122 0-7.464 3.364-7.464 7.511 0 4.148 3.342 7.51 7.464 7.51 4.123 0 7.466-3.362 7.466-7.51 0-4.147-3.343-7.51-7.466-7.51"
+                    fill="#04151F"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="get-started">
+            <div class="container">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>
+                    开始使用
+                  </strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+    <div class="footers">
+      <div class="container">
+        <p>
+          京 ICP 备 16038245 号 - 7 静态互传
+        </p>
+        <p>
+          京公网安备 11010602007254 号
+        </p>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"
+      integrity="sha256-ngFW3UnAN0Tnm76mDuu7uUtYEcG3G5H1+zioJw3t+68="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Full bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/buefy@0.8.20/dist/buefy.min.js"
+      integrity="sha256-PYlRR8ooM4V5Xoz3Q387jBzlu7m5ShAzPf8uYTW+6vo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      new Vue({
+        el: "#app",
+      });
+    </script>
+  </body>
+</html>
